@@ -79,7 +79,7 @@ msgstr "<strong>Дата на плащане:</strong>"
 #. module: l10n_bg
 #: model:ir.ui.view,arch_db:l10n_bg.report_invoice_bg
 msgid "<strong>Fiscal Position Remark:</strong>"
-msgstr "<strong>Фискална позиция отбелязване:</strong>"
+msgstr "<strong>Фискална позиция забележка:</strong>"
 
 #. module: l10n_bg
 #: model:ir.ui.view,arch_db:l10n_bg.report_invoice_bg
@@ -89,7 +89,7 @@ msgstr "<strong>ИН по ДДС: </strong>"
 #. module: l10n_bg
 #: model:ir.ui.view,arch_db:l10n_bg.report_invoice_bg
 msgid "<strong>IdentNum </strong>"
-msgstr "<strong>Идент. №: </strong>"
+msgstr "<strong>ЕИК: </strong>"
 
 #. module: l10n_bg
 #: model:ir.ui.view,arch_db:l10n_bg.report_invoice_bg
@@ -114,7 +114,7 @@ msgstr "<strong>Условия за плащане:</strong>"
 #. module: l10n_bg
 #: model:ir.ui.view,arch_db:l10n_bg.report_invoice_bg
 msgid "<strong>Place of deal:</strong>"
-msgstr "<strong>Място на стелка:</strong>"
+msgstr "<strong>Място на сделката:</strong>"
 
 #. module: l10n_bg
 #: model:ir.ui.view,arch_db:l10n_bg.report_invoice_bg
@@ -154,28 +154,28 @@ msgstr "<strong>Дан. събитие:</strong>"
 #. module: l10n_bg
 #: model:ir.ui.view,arch_db:l10n_bg.report_invoice_bg
 msgid "<strong>Total Without Taxes</strong>"
-msgstr "<strong>Общо без данъци:</strong>"
+msgstr "<strong>Общо:</strong>"
 
 #. module: l10n_bg
 #: model:ir.ui.view,arch_db:l10n_bg.report_invoice_bg
 msgid "<strong>Total</strong>"
-msgstr "<strong>Общо</strong>"
+msgstr "<strong>Всичко</strong>"
 
 #. module: l10n_bg
 #: model:ir.ui.view,arch_db:l10n_bg.report_invoice_bg
 msgid "Amount"
-msgstr "Количество"
+msgstr "Сума"
 
 #. module: l10n_bg
 #: model:ir.model.fields,field_description:l10n_bg.field_account_invoice_amount_in_word
 msgid "Amount in word"
-msgstr "Amount in word"
+msgstr "Сума словом"
 
 #. module: l10n_bg
 #: code:addons/l10n_bg/models/res_partner.py:63
 #, python-format
 msgid "BULSTAT/EIK isn't valid"
-msgstr "BULSTAT/EIK isn't valid"
+msgstr "Невалиден ЕИК"
 
 #. module: l10n_bg
 #: model:ir.model,name:l10n_bg.model_base_comment_template
@@ -185,32 +185,32 @@ msgstr "Base Comment template"
 #. module: l10n_bg
 #: model:ir.ui.view,arch_db:l10n_bg.report_invoice_bg
 msgid "Cancelled Invoice"
-msgstr "Отменена фактура"
+msgstr "Анулирана фактура"
 
 #. module: l10n_bg
 #: model:ir.model.fields,field_description:l10n_bg.field_base_comment_template_text
 msgid "Comment"
-msgstr "Коментар"
+msgstr "Забележка"
 
 #. module: l10n_bg
 #: model:ir.model.fields,field_description:l10n_bg.field_account_invoice_note1
 msgid "Comment 1"
-msgstr "Comment 1"
+msgstr "Забележка 1"
 
 #. module: l10n_bg
 #: model:ir.model.fields,field_description:l10n_bg.field_account_invoice_note2
 msgid "Comment 2"
-msgstr "Comment 2"
+msgstr "Забележка 2"
 
 #. module: l10n_bg
 #: model:ir.model.fields,field_description:l10n_bg.field_account_invoice_comment_template1_id
 msgid "Comment Template 1"
-msgstr "Comment Template 1"
+msgstr "Забележка Template 1"
 
 #. module: l10n_bg
 #: model:ir.model.fields,field_description:l10n_bg.field_account_invoice_comment_template2_id
 msgid "Comment Template 2"
-msgstr "Comment Template 2"
+msgstr "Забележка Template 2"
 
 #. module: l10n_bg
 #: model:ir.actions.act_window,name:l10n_bg.action_base_comment_template
@@ -218,22 +218,22 @@ msgstr "Comment Template 2"
 #: model:ir.ui.view,arch_db:l10n_bg.view_base_comment_template_search
 #: model:ir.ui.view,arch_db:l10n_bg.view_base_comment_template_tree
 msgid "Comment Templates"
-msgstr "Comment Templates"
+msgstr "Забележка Templates"
 
 #. module: l10n_bg
 #: model:ir.model.fields,field_description:l10n_bg.field_base_comment_template_name
 msgid "Comment summary"
-msgstr "Comment summary"
+msgstr "Забележка summary"
 
 #. module: l10n_bg
 #: model:ir.ui.view,arch_db:l10n_bg.bg_invoice_form_add_comment
 msgid "Comments"
-msgstr "Коментари"
+msgstr "Забележки"
 
 #. module: l10n_bg
 #: model:ir.model,name:l10n_bg.model_res_company
 msgid "Companies"
-msgstr "Компании"
+msgstr "Фирми"
 
 #. module: l10n_bg
 #: model:ir.model.fields,field_description:l10n_bg.field_base_comment_template_create_uid
@@ -263,12 +263,12 @@ msgstr "Име за показване"
 #. module: l10n_bg
 #: model:ir.ui.menu,name:l10n_bg.base_comment_template_menu
 msgid "Document Comments"
-msgstr "Document Comments"
+msgstr "Забележки"
 
 #. module: l10n_bg
 #: model:ir.ui.view,arch_db:l10n_bg.report_invoice_bg
 msgid "Draft Invoice"
-msgstr " Фактура - Чернова"
+msgstr "Фактура - Чернова"
 
 #. module: l10n_bg
 #: code:addons/l10n_bg/models/res_partner.py:18
@@ -277,7 +277,7 @@ msgstr " Фактура - Чернова"
 #: model:ir.ui.view,arch_db:l10n_bg.view_partner_form_1
 #, python-format
 msgid "EGN"
-msgstr "EGN"
+msgstr "ЕГН"
 
 #. module: l10n_bg
 #: model:ir.ui.view,arch_db:l10n_bg.external_layout_footer_bg
@@ -307,12 +307,12 @@ msgstr "Фактура<span> N° </span>"
 #. module: l10n_bg
 #: model:ir.model.fields,field_description:l10n_bg.field_base_comment_template___last_update
 msgid "Last Modified on"
-msgstr "Последно променено на"
+msgstr "Последна промяна на"
 
 #. module: l10n_bg
 #: model:ir.model.fields,field_description:l10n_bg.field_base_comment_template_write_uid
 msgid "Last Updated by"
-msgstr "Последно обновено от"
+msgstr "Последна промяна от"
 
 #. module: l10n_bg
 #: model:ir.model.fields,field_description:l10n_bg.field_base_comment_template_write_date
@@ -322,7 +322,7 @@ msgstr "Последно обновено на"
 #. module: l10n_bg
 #: model:ir.ui.view,arch_db:l10n_bg.bg_invoice_form_add_comment
 msgid "Load a template"
-msgstr "Зареди темплейт"
+msgstr "Зареди шаблон"
 
 #. module: l10n_bg
 #: code:addons/l10n_bg/models/res_company.py:30
@@ -335,12 +335,12 @@ msgstr "Зареди темплейт"
 #: model:ir.ui.view,arch_db:l10n_bg.view_partner_form_2
 #, python-format
 msgid "MOL"
-msgstr "MOL"
+msgstr "М.О.Л."
 
 #. module: l10n_bg
 #: selection:base.comment.template,position:0
 msgid "Method of payment"
-msgstr "Method of payment"
+msgstr "Начин на плащане"
 
 #. module: l10n_bg
 #: model:ir.ui.view,arch_db:l10n_bg.report_invoice_bg
@@ -375,7 +375,7 @@ msgstr "Телефон:"
 #. module: l10n_bg
 #: model:ir.model.fields,field_description:l10n_bg.field_account_invoice_place_of_deal
 msgid "Place of deal"
-msgstr "Място на сделка"
+msgstr "Място на сделката"
 
 #. module: l10n_bg
 #: model:ir.model.fields,field_description:l10n_bg.field_base_comment_template_position
@@ -385,7 +385,7 @@ msgstr "Позиция"
 #. module: l10n_bg
 #: model:ir.model.fields,help:l10n_bg.field_base_comment_template_position
 msgid "Position on document"
-msgstr "Позиция на документа"
+msgstr "Позиция в документа"
 
 #. module: l10n_bg
 #: model:ir.ui.view,arch_db:l10n_bg.report_invoice_bg
@@ -400,7 +400,7 @@ msgstr "Количество"
 #. module: l10n_bg
 #: selection:base.comment.template,position:0
 msgid "Reason for not charging VAT"
-msgstr "Reason for not charging VAT"
+msgstr "Основание за неначисляване на ДДС"
 
 #. module: l10n_bg
 #: model:ir.ui.view,arch_db:l10n_bg.report_invoice_bg
@@ -410,12 +410,12 @@ msgstr "Кредитно известие"
 #. module: l10n_bg
 #: model:ir.ui.view,arch_db:l10n_bg.report_invoice_bg
 msgid "Supplier Invoice<span> # </span>"
-msgstr "Supplier Invoice<span> N° </span>"
+msgstr "Фактура<span> N° </span>"
 
 #. module: l10n_bg
 #: model:ir.ui.view,arch_db:l10n_bg.report_invoice_bg
 msgid "Supplier Refund<span> # </span>"
-msgstr "Supplier Refund<span> N° </span>"
+msgstr "Кредитно Известие<span> N° </span>"
 
 #. module: l10n_bg
 #: model:ir.ui.view,arch_db:l10n_bg.report_invoice_bg
@@ -425,12 +425,12 @@ msgstr "Съгласно чл.7, ал 1 от Закона за счетовод�
 #. module: l10n_bg
 #: model:ir.ui.view,arch_db:l10n_bg.report_invoice_bg
 msgid "Tax"
-msgstr "Данъци"
+msgstr "ДДС"
 
 #. module: l10n_bg
 #: model:ir.ui.view,arch_db:l10n_bg.report_invoice_bg
 msgid "Taxes"
-msgstr "Данъци"
+msgstr "ДДС"
 
 #. module: l10n_bg
 #: model:ir.ui.view,arch_db:l10n_bg.view_partner_form_1
@@ -445,7 +445,7 @@ msgstr "Въведи ЕГН"
 #: model:ir.ui.view,arch_db:l10n_bg.view_partner_form_2
 #, python-format
 msgid "BULSTAT"
-msgstr "Булстат"
+msgstr "ЕИК"
 
 #. module: l10n_bg
 #: code:addons/l10n_bg/models/res_company.py:29
@@ -454,7 +454,7 @@ msgstr "Булстат"
 #: model:ir.model.fields,help:l10n_bg.field_res_partner_bg_uic
 #, python-format
 msgid "Bulstat by Bulgarian register agency"
-msgstr "Bulstat by Bulgarian register agency"
+msgstr "ЕИК от Търговски Регистър"
 
 #. module: l10n_bg
 #: model:ir.ui.view,arch_db:l10n_bg.report_invoice_bg
@@ -470,7 +470,7 @@ msgstr "Уеб сайт:"
 #: model:ir.ui.view,arch_db:l10n_bg.view_company_form_1
 #: model:ir.ui.view,arch_db:l10n_bg.view_partner_form_2
 msgid "e.g. BULSTAT or EIK"
-msgstr "e.g. Булстат или Единен идентификационен код."
+msgstr "напр. ЕИК или ДДС номер."
 
 #. module: l10n_bg
 #: model:ir.ui.view,arch_db:l10n_bg.view_company_form_1
