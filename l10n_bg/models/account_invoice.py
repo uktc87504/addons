@@ -38,7 +38,6 @@ class AccountInvoice(models.Model):
     note2 = fields.Html(_('Comment 2'))
     comment = fields.Text(translate=True)
     amount_in_word = fields.Char(readonly=True, default=False, copy=False, compute='_compute_text')
-    # place_of_deal = fields.Char(compute='_compute_place_of_deal', store=True, translate=True)
     place_of_deal = fields.Char(store=True, translate=True)
     proforma_number = fields.Char(store=True, readonly=True, copy=False)
 
@@ -63,44 +62,9 @@ class AccountInvoice(models.Model):
         if comment:
             self.note2 = comment.get_value(self.partner_id.id)
 
-    @staticmethod
-    def _set_place_of_deal(partner_id, city, country):
-        place_of_deal = []
-        if partner_id:
-            if city:
-                place_of_deal.append(city)
-            if country:
-                place_of_deal.append(country)
-        return ', '.join(place_of_deal)
-
-    @api.onchange('place_of_deal')
-    def onchange_place_of_deal(self):
-        if not self.place_of_deal:
-            self.place_of_deal = self._set_place_of_deal(self.company_id.partner_id,
-                                                         self.company_id.partner_id.city,
-                                                         self.company_id.partner_id.country_id.name
-                                                         )
-            _logger.info("Place of deal created (onchange): %s" % self.place_of_deal)
-
     @api.one
     @api.constrains('type', 'state')
     def _check_proforma2(self):
         if self.proforma_number is False and self.type == 'out_invoice' and self.state == 'proforma2':
             self.proforma_number = self.env['ir.sequence'].next_by_code('account.invoice.proforma')
             _logger.info("Proforma number created: %s" % self.proforma_number)
-
-    @api.model
-    def create(self, vals):
-        # if self.type == 'out_invoice' and self.state == 'proforma2' and 'proforma_number' not in vals:
-        #     vals['proforma_number'] = self.env['ir.sequence'].next_by_code('account.invoice.proforma')
-        #     _logger.info("Proforma number created: %s" % vals['proforma_number'])
-
-        if 'place_of_deal' not in vals:
-            company = self.env['res.company'].browse(vals['company_id'])
-            vals['place_of_deal'] = self._set_place_of_deal(company.partner_id, company.partner_id.city,
-                                                            company.partner_id.country_id.name
-                                                            )
-            _logger.info("Place of deal created (on model create): %s" % vals['place_of_deal'])
-
-        return super(AccountInvoice, self).create(vals)
-

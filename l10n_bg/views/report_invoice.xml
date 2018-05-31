@@ -117,16 +117,6 @@
                                     <td><strong>MOL: </strong></td>
                                     <td><span t-field="o.partner_id.bg_mol"/></td>
                                 </t>
-                                <t t-if="not o.partner_id.is_company">
-                                    <t t-if="o.partner_id.country_id.id == 23">
-                                        <td><strong>EGN: </strong></td>
-                                        <td><span t-field="o.partner_id.bg_egn"/></td>
-                                    </t>
-                                    <t t-if="o.partner_id.country_id.id != 23">
-                                        <td/>
-                                        <td/>
-                                    </t>
-                                </t>
                                 <td><strong>MOL: </strong></td>
                                 <td><span t-field="o.company_id.bg_mol"/></td>
                             </tr>
@@ -227,7 +217,7 @@
                             </table>
                         </div>
 
-                        <div class="row" t-if="o.tax_line_ids" style="padding-left:15px; ">
+                        <!--div class="row" t-if="o.tax_line_ids" style="padding-left:15px; ">
                             <div class="col-xs-6">
                                 <table class="table table-condensed">
                                     <thead>
@@ -247,7 +237,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                        </div>
+                        </div-->
                     </div>
 
                     <p t-if="o.fiscal_position_id.note">

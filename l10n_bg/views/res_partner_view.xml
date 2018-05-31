@@ -6,14 +6,6 @@
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
-
-                <field name="name" position="after">
-                    <label for="bg_egn" string="EGN" attrs="{'invisible': [('is_company','=',True)]}"/>
-                    <div id="bg_egn" class="o_row" attrs="{'invisible': [('is_company','=',True)]}">
-                        <field name="bg_egn" placeholder="Type Bulgarian EGN" />
-                    </div>
-                </field>
-
                 <field name="property_account_position_id" position="after">
                     <label for="bg_mol" string="MOL" attrs="{'invisible': [('is_company','=',False)]}"/>
                     <div id="bg_mol" class="o_row" attrs="{'invisible': [('is_company','=',False)]}">
@@ -24,10 +16,8 @@
                         <field name="bg_uic" placeholder="e.g. BULSTAT or EIK"/>
                     </div>
                 </field>
-
             </field>
         </record>
-
     </data>
 </openerp>
 

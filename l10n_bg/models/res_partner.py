@@ -32,50 +32,12 @@ class ResPartner(models.Model):
     _inherit = "res.partner"
 
     name = fields.Char(translate=True)
-    bg_egn = fields.Char(string=_('EGN'), store=True, size=10, help=_('EGN'))
     bg_uic = fields.Char(string=_('BULSTAT'), store=True, size=13, help=_('BULSTAT by Bulgarian register agency'))
     bg_mol = fields.Char(string=_('MOL'), translate=True, store=True, size=100, help=_('MOL'))
     zip = fields.Char(translate=True)
     city = fields.Char(translate=True)
     street = fields.Char(translate=True)
     street2 = fields.Char(translate=True)
-
-    @api.one
-    @api.constrains('bg_egn')
-    def _check_egn(self):
-
-        if not self.bg_egn:
-            return True
-
-        if self.country_id.id != 23:
-            _logger.info("We check only BG contacts. %s, %s" % (self.display_name, self.country_id.name))
-            return True
-
-        if not self.egn_checker(self.bg_egn):
-            _logger.error(self.bg_egn)
-            raise Exception("EGN isn't valid.")
-
-    @staticmethod
-    def egn_checker(egn):
-
-        def get_checksum(weights, digits):
-            checksum = sum([weight * digit for weight, digit in zip(weights, digits)])
-            return checksum % 11
-
-        def check_egn(egn):
-            digits = egn[0:10]
-            checksum = get_checksum([2, 4, 8, 5, 10, 9, 7, 3, 6], digits)
-            return digits[-1] == checksum % 10
-
-        try:
-            egn = map(int, list(egn))
-        except ValueError:
-            return False
-
-        if not (len(egn) in [10] and check_egn(egn)):
-            return False
-
-        return True
 
     @api.one
     @api.constrains('bg_uic')
@@ -129,4 +91,4 @@ class ResPartner(models.Model):
     @api.model
     def _commercial_fields(self):
         return super(ResPartner, self)._commercial_fields() + \
-            ['bg_egn', 'bg_mol', 'bg_uic']
+            ['bg_mol', 'bg_uic']
